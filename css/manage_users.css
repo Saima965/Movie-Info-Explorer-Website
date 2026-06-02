@@ -1,0 +1,113 @@
+/* General page layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f8f9fa;
+}
+
+.header .logo {
+    color: #0c416a;
+	
+}
+/* Prevent underline on CineScope logo */
+.header .logo:hover {
+    
+    text-decoration: none !important;
+}
+
+
+.container {
+    padding: 120px 20px 20px; /* space for fixed header */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Headings */
+h2 {
+    margin-top: 40px;
+    font-size: 22px;
+    color: #333;
+    border-bottom: 2px solid #3187c9;
+    padding-bottom: 6px;
+}
+
+/* Table styling */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    overflow: hidden;
+    font-size: 15px;
+}
+
+table th {
+    background: #3187c9;
+    color: #fff;
+    padding: 12px;
+    text-align: left;
+    font-size: 16px;
+}
+
+table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+}
+
+/* Zebra striping */
+table tr:nth-child(even) {
+    background: #f2f6fa;
+}
+
+/* Inline forms */
+form.inline-form input[type=text],
+form.inline-form select {
+    padding: 6px;
+    font-size: 14px;
+    margin: 2px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form.inline-form input[type=submit] {
+    padding: 6px 12px;
+    font-size: 14px;
+    background: #3187c9;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form.inline-form input[type=submit]:hover {
+    background: #2565a1;
+}
+
+/* Default link styling (not delete) */
+a {
+    color: #3187c9;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+a:hover {
+    color: #2565a1;
+    text-decoration: underline;
+}
+
+/* Delete links in table only */
+table a {
+    color: #e74c3c;
+    font-weight: bold;
+    margin-left: 8px;
+    transition: color 0.3s ease;
+}
+
+table a:hover {
+    color: #c0392b;
+}

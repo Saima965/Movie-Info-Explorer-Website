@@ -1,0 +1,109 @@
+/* Import Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Color variables */
+:root {
+  --primary: #3187c9;        /* Main blue */
+  --black: #0c416a;          /* Deep navy-black */
+  --light-color: #6c757d;    /* Soft gray for text */
+  --white: #ffffff;
+  --accent: #f4b400;         /* Golden yellow accent */
+  --background: #f8f9fa;     /* Light gray background */
+  --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .3);
+  --border: .2rem solid rgba(0, 0, 0, .1);
+  --outline: .1rem solid rgba(49, 135, 201, .3);
+}
+
+/* Global resets */
+* {
+    font-family: "Roboto", sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration:none;
+    transition:all .2s linear;
+}
+
+body {
+    background: var(--background);
+}
+
+/* Container for notifications */
+.container { 
+    width: 80%; 
+    margin: 30px auto; 
+    background: var(--white); 
+    padding: 100px; 
+    border-radius: 10px; 
+    box-shadow: var(--box-shadow);
+}
+
+/* Page heading */
+h2 { 
+    text-align: center; 
+    margin-bottom: 20px; 
+    color: var(--primary);
+    font-weight: 700;
+}
+
+/* Each notification box */
+.notif { 
+    padding: 12px; 
+    border-bottom: 1px solid #ddd; 
+    position: relative;
+    color: var(--black);
+    font-size: 1.6rem;
+}
+
+/* Remove border for last notification */
+.notif:last-child { 
+    border-bottom: none; 
+}
+
+/* Notification message */
+.msg { 
+    color: var(--black); 
+}
+
+/* Notification time */
+.time { 
+    font-size: 1.4rem; 
+    color: var(--light-color); 
+    float: right; 
+    margin-left: 10px; 
+}
+
+/* Delete button */
+.delete-btn { 
+    display: inline-block; 
+    background: var(--primary); 
+    color: var(--white); 
+    text-decoration: none; 
+    padding: 4px 8px; 
+    border-radius: 5px; 
+    font-size: 1.4rem;
+    float: right;
+    margin-left: 10px;
+}
+
+/* Delete button hover effect */
+.delete-btn:hover { 
+    background: var(--accent); 
+    color: var(--black);
+}
+
+/* No notifications message */
+.no-notif { 
+    text-align: center; 
+    color: var(--light-color); 
+    font-style: italic; 
+    font-size: 1.6rem;
+}
+/* ==============================
+   Hide Search Icon and Search Form
+   ============================== */
+header#search-btn,
+header .search-form,
+header .fa-search {
+    display: none !important; /* Hide search button, icon, and form completely */
+}

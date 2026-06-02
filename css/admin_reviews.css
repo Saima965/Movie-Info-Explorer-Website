@@ -1,0 +1,94 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Theme variables */
+:root {
+  --primary: #3187c9;
+  --black: #0c416a;
+  --light-color: #6c757d;
+  --white: #ffffff;
+  --accent: #f4b400;
+  --background: #f8f9fa;
+  --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .3);
+  --border: .2rem solid rgba(0, 0, 0, .1);
+  --outline: .1rem solid rgba(49, 135, 201, .3);
+}
+
+/* Only target elements inside the admin container */
+.container, 
+.container * {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: none;
+    transition: all .2s linear;
+}
+
+/* Body container */
+.container {
+    margin: 100px auto 40px auto; /* space for header */
+    max-width: 1100px;
+    padding: 20px;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+/* Headings */
+.container h2 {
+    font-size: 2.2rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.container h3 {
+    font-size: 1.8rem;
+    margin: 30px 0 15px;
+    color: var(--black);
+}
+
+/* Tables */
+.container table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 30px;
+    background: var(--white);
+    box-shadow: var(--box-shadow);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.container th, .container td {
+    border: var(--border);
+    padding: 12px;
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--black);
+}
+
+.container th {
+    background: var(--primary);
+    color: var(--white);
+    font-weight: normal; /* remove bold if needed */
+    font-size: 1.5rem;
+}
+
+.container tr:nth-child(even) {
+    background: #f4f8fc;
+}
+
+/* Action links */
+.container a {
+    color: var(--accent);
+    font-weight: normal; /* remove bold */
+    cursor: pointer;
+}
+
+.container a:hover {
+    
+    color: #FF0000;
+}

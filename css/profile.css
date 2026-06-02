@@ -1,0 +1,122 @@
+/* admin_profile.css */
+
+/* Adjust for fixed header */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    margin: 0;
+    padding: 80px 0 0 0; /* Top padding equals header height */
+}
+
+h2, h3 {
+    color: #3187c9;
+}
+
+/* Profile Card */
+.profile-container {
+    max-width: 500px;
+    margin: 0 auto 50px auto; /* Center horizontally, bottom margin for spacing */
+    background-color: #fff;
+    padding: 40px 30px; /* Extra top padding for visibility under header */
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Profile Image */
+.profile-image {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.profile-image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #3187c9;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.profile-image img:hover {
+    transform: scale(1.05);
+}
+
+/* User Info */
+p {
+    font-size: 16px;
+    margin: 5px 0 15px 0;
+}
+
+/* Forms */
+form {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="file"] {
+    padding: 12px;
+    margin: 5px 0 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus,
+form input[type="file"]:focus {
+    border: 1px solid #31;
+}
+
+/* Submit Buttons */
+form input[type="submit"] {
+    background-color: #3187c9;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0c416a;
+}
+
+/* Delete Account Button */
+.delete-account input[type="submit"] {
+    background-color: #e74c3c;
+}
+
+.delete-account input[type="submit"]:hover {
+    background-color: #c0392b;
+}
+
+/* Message Display */
+.msg {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+    color: green;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 500px) {
+    .profile-container {
+        width: 90%;
+        padding: 35px 20px;
+    }
+}
+header#search-btn,
+header .search-form,
+header .fa-search {
+    display: none !important;
+}

@@ -1,0 +1,109 @@
+/* ------------------- Customer Dashboard Styles ------------------- */
+.customer-dashboard {
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 1.5rem;
+    color: #0c416a; /* theme black */
+    padding-top: 100px; /* space for fixed header */
+    background-color: #f8f9fa;
+}
+
+.customer-dashboard h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #3187c9; /* theme primary */
+}
+
+/* ------------------- Horizontal Scroll for Movie Rows ------------------- */
+/* Make each genre row horizontally scrollable */
+.customer-dashboard .movies-container {
+    display: flex;
+    flex-wrap: nowrap; /* prevent wrapping to next line */
+    overflow-x: auto;  /* allow horizontal scroll if movies exceed width */
+    gap: 10px;         /* space between movie cards */
+    padding-bottom: 10px;
+    scrollbar-width: thin; /* Firefox scrollbar style */
+}
+
+/* Webkit scrollbar styling */
+.customer-dashboard .movies-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.customer-dashboard .movies-container::-webkit-scrollbar-thumb {
+    background-color: #3187c9;
+    border-radius: 4px;
+}
+
+/* ------------------- Movie Card Styles ------------------- */
+.customer-dashboard .movie-card {
+    flex: 0 0 auto; /* prevent shrinking; stay in one row */
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    color: #0c416a;
+}
+
+.customer-dashboard .movie-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+/* ------------------- Watchlist Button ------------------- */
+.customer-dashboard .watchlist-form {
+    margin-top: 5px;
+}
+
+.customer-dashboard .watchlist-form button {
+    background-color: #3187c9;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1.4rem;
+}
+
+.customer-dashboard .watchlist-form button:hover {
+    background-color: #235a8e;
+}
+
+.customer-dashboard .favorited {
+    color: green;
+    font-weight: bold;
+}
+
+/* ------------------- Details Link/Text ------------------- */
+/* Keep Details link as simple text (for pages where Details is used) */
+.customer-dashboard .details-link {
+    display: inline-block;
+    margin-top: 5px;
+    color: #3187c9;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 1.4rem;
+}
+
+.customer-dashboard .details-link:hover {
+    color: #235a8e;
+}
+
+/* ------------------- Paragraph/Description ------------------- */
+.customer-dashboard p {
+    font-size: 1.4rem;
+    color: #333;
+    margin-top: 5px;
+    line-height: 1.4;
+}
+
+/* Optional: No-results message */
+.customer-dashboard .no-results {
+    font-size: 1.6rem;
+    color: #555;
+    margin-top: 20px;
+}

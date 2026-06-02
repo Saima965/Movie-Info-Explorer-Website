@@ -1,0 +1,113 @@
+:root {
+    --primary: #3187c9;
+    --black: #0c416a;
+    --white: #fff;
+}
+
+#movies-section {
+    padding: 6rem 5%;
+}
+
+#movies-section h3 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+#movieSearch {
+    padding: 8px;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1.4rem;
+}
+
+/* Vertical list container */
+.movie-container-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Each movie card full width */
+.movie-card-vertical {
+    width: 100%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 .3rem .8rem rgba(0,0,0,.15);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+/* Image */
+.movie-card-vertical img {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+.movie-card-vertical .no-image {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+/* Movie info */
+.movie-card-vertical .movie-info {
+    width: 100%;
+    text-align: left;
+    padding: 0 1rem;
+}
+
+.movie-card-vertical .movie-info h4 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.movie-card-vertical .genre {
+    font-size: 1.4rem;
+    color: #555;
+    margin-bottom: 0.3rem;
+}
+
+.movie-card-vertical .description {
+    font-size: 1.3rem;
+    color: #777;
+    margin-bottom: 0.8rem;
+}
+
+/* Edit button */
+.movie-card-vertical .edit-btn {
+    background: var(--primary);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.movie-card-vertical .edit-btn:hover {
+    background: #0c416a;
+}
+
+/* Responsive */
+@media (max-width: 768px){
+    #movieSearch { width: 100%; }
+    .movie-card-vertical img,
+    .movie-card-vertical .no-image { max-width: 100%; height: 250px; }
+    .movie-card-vertical .movie-info { padding: 0; }
+}

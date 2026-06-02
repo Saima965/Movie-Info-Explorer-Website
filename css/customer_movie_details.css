@@ -1,0 +1,169 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Theme variables */
+:root {
+  --primary: #3187c9;        /* Main blue */
+  --black: #0c416a;          /* Deep navy-black for strong contrast */
+  --light-color: #6c757d;    /* Soft gray for text */
+  --white:#ffffff;
+  --accent: #f4b400;         /* Golden yellow accent */
+  --background: #f8f9fa;     /* Very light gray/white background */
+  --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .3);
+  --border: .2rem solid rgba(0, 0, 0, .1);
+  --outline: .1rem solid rgba(49, 135, 201, .3); /* subtle blue glow */
+}
+
+/* Global reset */
+* {
+    font-family: "Roboto", sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    outline:none;
+    border:none;
+    text-decoration:none;
+    text-transform:none;  /* keep text natural, no auto capitalization */
+    transition:all .2s linear;
+}
+
+body {
+    background:white;
+    font-size: 1.5rem;
+    color: var(--black);
+}
+
+/* Movie page container */
+.movie-page-container {
+    display: flex;
+    gap: 20px;
+    margin: 100px auto 40px auto; /* space for header */
+    max-width: 1000px;
+    padding: 20px;
+}
+
+/* Movie image box */
+.movie-page-container .movie-image {
+    width: 250px;
+    height: 350px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--box-shadow);
+}
+
+.movie-page-container .movie-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.no-image {
+    font-size: 1.4rem;
+    color: #555;
+}
+
+/* Movie details */
+.movie-details {
+    max-width: 700px;
+}
+
+.movie-details h2 {
+    margin: 0 0 10px;
+    font-size: 2.2rem; /* slightly smaller */
+    color: var(--primary);
+}
+
+.movie-details p {
+    font-size: 1.5rem;
+    margin: 5px 0;
+    color: var(--black);
+}
+
+.movie-details h3 {
+    margin-top: 20px;
+    font-size: 1.7rem;
+    color: var(--black);
+}
+
+/* Rating form */
+.rating-form label {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: var(--black);
+}
+
+.rating-form select {
+    width: 140px;
+    padding: 8px;
+    margin: 8px 0;
+    font-size: 1.6rem;
+    border: var(--border);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.rating-form button,
+.review-form button {
+    padding: 8px 15px;
+    border: none;
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.4rem;
+    box-shadow: var(--box-shadow);
+}
+
+.rating-form button:hover,
+.review-form button:hover {
+    background: #236ba3;
+}
+
+/* Review form */
+.review-form textarea {
+    width: 100%;
+    height: 90px;
+    padding: 8px;
+    margin: 8px 0;
+    font-size: 1.5rem;
+    border: var(--border);
+    border-radius: 5px;
+    resize: none;
+}
+
+/* Reviews */
+.reviews {
+    margin-top: 15px;
+}
+
+.review-item {
+    border-bottom: var(--border);
+    padding: 10px 0;
+}
+
+.review-item strong {
+    font-size: 1.4rem;
+    color: var(--primary);
+}
+
+.review-item .rating {
+    margin-left: 10px;
+    color: var(--accent);
+    font-size: 1.6rem;
+}
+
+.review-item p {
+    margin: 5px 0 0;
+    font-size: 1.4rem;
+    color: var(--black);
+}
+/* Hide search icon in header on movie details page */
+body.movie-details-page .fa-search#search-btn {
+    display: none !important;
+}

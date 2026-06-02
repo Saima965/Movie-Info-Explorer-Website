@@ -1,0 +1,70 @@
+/* Make html and body full height */
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0 0 120px; /* bottom padding same as footer height to prevent overlap */
+}
+
+/* Footer styling */
+.footer {
+    background: #276ba0; /* darker blue */
+    color: #fff;
+    padding: 2rem 9%;
+    font-family: "Roboto", sans-serif;
+
+    /* push footer to bottom if content is short */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Footer container layout */
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-logo {
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-nav a {
+    margin: 0 1rem;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.footer-nav a:hover {
+    color: #f4b400;
+}
+
+.footer-social a {
+    margin: 0 0.5rem;
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.footer-social a:hover {
+    color: #f4b400;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    padding-top: 1rem;
+}

@@ -1,0 +1,200 @@
+/* movie_details.css - Scoped Safe Version */
+
+/* General page layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f8f9fa;
+    color: #333;
+}
+
+/* Container for form and table */
+.container {
+    padding: 160px 20px 20px; /* top padding avoids header */
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px; /* space between form and table */
+}
+
+/* Form section */
+.form-section {
+    flex: 1;
+    max-width: 450px;
+    align-self: flex-start; /* align top of form with table */
+}
+
+/* Table section */
+.table-section {
+    flex: 2;
+    min-width: 600px;
+}
+
+/* Headings */
+h3 {
+    margin-top: 0;
+    font-size: 22px;
+    color: #0c416a;
+    border-bottom: 2px solid #3187c9;
+    padding-bottom: 6px;
+}
+
+/* --- Form styling (scoped only to movie form) --- */
+.form-section form {
+    background: #fff;
+    padding: 25px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.form-section form input[type="text"],
+.form-section form select,
+.form-section form input[type="file"] {
+    width: 95%;
+    padding: 10px 12px;
+    margin: 10px 0 18px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.form-section form textarea {
+    width: 95%;
+    height: 100px;
+    padding: 10px 12px;
+    margin: 10px 0 18px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.form-section form input[type="submit"] {
+    background: #3187c9;
+    color: #fff;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.form-section form input[type="submit"]:hover {
+    background: #2565a1;
+}
+
+.form-section form a {
+    color: #3187c9;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.form-section form a:hover {
+    color: #2565a1;
+    text-decoration: underline;
+}
+
+/* Table Styling */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    overflow: hidden;
+    font-size: 15px;
+}
+
+table th {
+    background: #3187c9;
+    color: #fff;
+    padding: 14px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+}
+
+table td:nth-child(1),
+table td:nth-child(2),
+table td:nth-child(3) {
+    font-weight: bold;
+}
+
+table td:nth-child(4) {
+    white-space: normal;
+    max-width: 400px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+table img {
+    border-radius: 4px;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+table tr {
+    height: 60px;
+}
+
+table tr:nth-child(even) {
+    background: #f2f6fa;
+}
+
+table a {
+    font-weight: bold;
+    margin-left: 8px;
+    transition: color 0.3s ease;
+}
+
+table a[href*="edit"] {
+    color: #3187c9;
+}
+table a[href*="edit"]:hover {
+    color: #2565a1;
+}
+
+table a[href*="delete"] {
+    color: #e74c3c;
+}
+
+table a[href*="delete"]:hover {
+    color: #c0392b;
+}
+
+/* Responsive tweaks */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        padding-top: 200px;
+    }
+
+    .form-section, .table-section {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+
+    table {
+        min-width: 100%;
+    }
+}
+
+/* NO .header or .search-form overrides here! */

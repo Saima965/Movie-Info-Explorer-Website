@@ -1,0 +1,76 @@
+/* Scope all editor dashboard styles */
+.editor-dashboard {
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 1.5rem;
+    color: #0c416a; /* theme black */
+    padding-top: 100px; /* space for fixed header */
+    background-color: #f8f9fa;
+}
+
+.editor-dashboard h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #3187c9; /* theme primary */
+}
+
+/* Make each genre row horizontally scrollable */
+.editor-dashboard .movies-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 10px;
+    padding-bottom: 10px;
+    scrollbar-width: thin;
+}
+
+.editor-dashboard .movies-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.editor-dashboard .movies-container::-webkit-scrollbar-thumb {
+    background-color: #3187c9;
+    border-radius: 4px;
+}
+
+.editor-dashboard .movie-card {
+    flex: 0 0 auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    color: #0c416a;
+}
+
+.editor-dashboard .movie-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+/* Style Edit link like a button */
+.editor-dashboard .edit-link {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 6px 12px;
+    background-color: #3187c9;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1.3rem;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.editor-dashboard .edit-link:hover {
+    background-color: #235a8e;
+}
+
+/* Optional: No-results message */
+.editor-dashboard .no-results {
+    font-size: 1.6rem;
+    color: #555;
+    margin-top: 20px;
+}

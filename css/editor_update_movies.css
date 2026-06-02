@@ -1,0 +1,120 @@
+/* ==============================
+   General Body Styling
+   ============================== */
+body {
+    font-family: 'Arial', sans-serif; /* Set the main font for the page */
+    background-color: #f4f6f8; /* Light gray background */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the form horizontally */
+    align-items: flex-start; /* Align form at the top */
+    padding: 30px; /* Space around the body content */
+    color: #0c416a; /* Dark blue text color for all body text */
+}
+
+/* ==============================
+   Form Container Styling
+   ============================== */
+.form-container {
+    background-color: #fff; /* White background for the form */
+    padding: 40px 30px; /* Space inside the form */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Light shadow for depth */
+    width: 600px; /* Form width */
+    max-width: 90%; /* Make responsive on smaller screens */
+    display: flex; /* Flex layout for inner elements */
+    flex-direction: column; /* Stack elements vertically */
+    gap: 15px; /* Space between elements inside the form */
+}
+
+/* ==============================
+   Form Heading Styling
+   ============================== */
+.form-container h2 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 25px; /* Space below heading */
+    color: #3187c9; /* Dark blue heading color */
+}
+
+/* ==============================
+   Labels Styling
+   ============================== */
+.form-container label {
+    display: block; /* Make labels take full width */
+    margin: 10px 0 5px; /* Space above and below the label */
+    font-weight: bold; /* Bold text */
+    color: #0c416a; /* Dark blue label text */
+    font-size: 16px; /* Larger font size for readability */
+}
+
+/* ==============================
+   Input, Textarea, Select Styling
+   ============================== */
+.form-container input[type=text],
+.form-container textarea,
+.form-container select {
+    width: 100%; /* Full width inside form */
+    padding: 12px; /* Space inside input */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 14px; /* Font size for text inside input */
+    outline: none; /* Remove default focus outline */
+    transition: border 0.3s; /* Smooth border change on focus */
+    box-sizing: border-box; /* Ensure padding does not exceed width */
+    color: #0c416a; /* Dark blue text inside inputs */
+}
+
+/* Highlight input when focused */
+.form-container input[type=text]:focus,
+.form-container textarea:focus,
+.form-container select:focus {
+    border: 1px solid #3187c9; /* Dark blue border on focus */
+}
+
+/* ==============================
+   File Input Styling
+   ============================== */
+.form-container input[type=file] {
+    margin-top: 5px; /* Small spacing above file input */
+}
+
+/* ==============================
+   Current Image Preview Styling
+   ============================== */
+.current-image {
+    text-align: center; /* Center the image */
+    margin-bottom: 15px; /* Space below image */
+}
+
+.current-image img {
+    max-width: 120px; /* Limit image width */
+    border-radius: 5px; /* Slightly rounded corners */
+    border: 1px solid #ddd; /* Light gray border */
+}
+
+/* ==============================
+   Button Styling
+   ============================== */
+.form-container button {
+    width: 100%; /* Button takes full width of form */
+    padding: 12px; /* Space inside button */
+    background-color: #3187c9; /* Dark blue background */
+    border: none; /* Remove default border */
+    color: #fff; /* White text */
+    font-size: 14px; /* Font size of button text */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: 0.3s; /* Smooth transition for hover */
+}
+
+/* Change button color on hover */
+.form-container button:hover {
+    background-color: #0c416a; /* Darker blue on hover */
+}
+/* ==============================
+   Hide Search Icon and Search Form
+   ============================== */
+header#search-btn,
+header .search-form,
+header .fa-search {
+    display: none !important; /* Hide search button, icon, and form completely */
+}

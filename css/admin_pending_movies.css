@@ -1,0 +1,101 @@
+/* admin_pending_movies.css */
+
+/* General page styling */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 0; /* Removed previous padding, handled by content wrapper */
+    color: #333;
+}
+
+/* Content wrapper to prevent overlap with fixed header and footer */
+.content-wrapper {
+    margin-top: 100px;   /* Adjust this to match the height of your fixed header */
+    margin-bottom: 80px; /* Adjust this to match the height of your footer */
+    padding: 0 20px;     /* Optional horizontal padding */
+}
+
+/* Heading */
+h3 {
+    text-align: center;
+    font-size: 24px;
+    color: #0c416a;
+    margin-bottom: 20px;
+}
+
+/* Table styles */
+table {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Table header */
+table th {
+    background-color: #3187c9;
+    color: #fff;
+    padding: 12px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* Table rows */
+table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Alternate row color */
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Hover effect */
+table tr:hover {
+    background-color: #f1f7ff;
+}
+
+/* Action links */
+table td a {
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* Approve button */
+table td a[href*="approve"] {
+    background-color: #28a745;
+    color: white;
+}
+
+table td a[href*="approve"]:hover {
+    background-color: #218838;
+}
+
+/* Reject button */
+table td a[href*="reject"] {
+    background-color: #dc3545;
+    color: white;
+    margin-left: 8px;
+}
+
+table td a[href*="reject"]:hover {
+    background-color: #c82333;
+}
+/* ==============================
+   Hide Search Icon and Search Form
+   ============================== */
+header#search-btn,
+header .search-form,
+header .fa-search {
+    display: none !important; /* Hide search button, icon, and form completely */
+}
